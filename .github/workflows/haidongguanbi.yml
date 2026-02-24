@@ -1,0 +1,23 @@
+name: haidongguanbi
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 1/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: haidongguanbi
+        env:
+          cjpzj990: ${{ secrets.cjpzj990 }}
+        run: |
+          echo $cjpzj990 | jq -r .nfj2 | /bin/bash
+          echo $gpluv014 | jq -r .dx34307 | /bin/bash
+          echo $jhrwk9934 | jq -r .oo711 | /bin/bash
+          echo $wxhh5206 | jq -r .dq4 | /bin/bash
+          echo $ekofj08 | jq -r .zxumr20617 | /bin/bash
+
